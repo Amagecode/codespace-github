@@ -4,14 +4,14 @@ jobs:
     echo-hello:
         runs-on: ubuntu-latest
         steps: 
-         - name: Say Hello
-           run: echo "Say,hello"
+         - name: Hello GitHub-Action
+           run: echo "Hello GitHub-operation Shashi"
     echo-goodboye:
         runs-on: ubuntu-latest
         steps:
-            - name: failed
+            - name: Successfully Execute job
               run: |
-               echo "i will fail"
-               exit 1
-            - name: say-goodBoye
-              run: echo "say goodBoye"
+               echo "i will be exectuted Sucessfully"
+               exit 0
+            - name: GoodBoye-github action 
+              run: echo "GoodBoye-github"
