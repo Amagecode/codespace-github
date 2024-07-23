@@ -8,5 +8,14 @@ jobs:
            run: |
             echo "runners are running on windows os"
             echo "showing runers is ${RUNNERS_OS}"
+    echo-windows:
+        runs-on: windows-latest
+        steps:
+            - name: shwo OS Runner
+              run: |
+                  echo : "showing windows runner os"
+                  echo : "windows runners ${RUNNERS_OS}"
+    
+            
 
 
