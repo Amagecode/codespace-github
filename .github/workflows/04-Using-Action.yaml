@@ -15,6 +15,6 @@ jobs:
                 node-version: '20.x'
             - name: installe dependencies
               uses:
-                npm ls           
+                npm ci         
 
 
