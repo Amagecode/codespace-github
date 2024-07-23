@@ -1,0 +1,13 @@
+name: 04-action workfolw
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout Action
+              uses: actions/checkout@v4
+            - name: printing folders 
+              run:
+                ls  
+
+
