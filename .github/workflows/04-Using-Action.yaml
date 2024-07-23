@@ -6,12 +6,12 @@ jobs:
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
-            - name: Setup-Node
+            - name: Setup node
               uses: actions/setup-node@v3
               with:
                 node-version: '20.x'
-            - name: install Dependencies
-              run: npm ci    
-              working-directory: 04-Using-Action/react-app      
+            - name: Install dependencies
+              run: npm ci   
+                
 
 
