@@ -11,6 +11,6 @@ jobs:
               with:
                 node-version: '20.x'
             - name: install Dependencies
-              run: npm Ci         
+              run: npm ci         
 
 
