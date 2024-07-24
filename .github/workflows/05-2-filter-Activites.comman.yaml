@@ -1,0 +1,13 @@
+name: 05-2-Event-filter and activites type
+on:
+  pull_request:
+    types:
+      - closed
+      #- synchronize
+    branches:
+      - main    
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "running when pr is closed"
