@@ -1,17 +1,31 @@
-name: 01 - Windows-Runner-test
-on: push
+name: Simple Windows Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: self-hosted 
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set PowerShell Execution Policy
-        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-        shell: powershell
-
-      - name: Run script
+      - name: Set up PowerShell
         run: |
-          echo "Hello GitHub-operation Shashi"
+          Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
         shell: powershell
+
+      - name: Run PowerShell script
+        run: |
+          Write-Output "Hello from GitHub Actions on Windows!"
+        shell: powershell
+
+      - name: Run a command
+        run: |
+          echo "This is a simple command running on Windows runner."
