@@ -1,0 +1,22 @@
+name: 03-workflow Runners
+on: push
+jobs:
+    echo-ubuntu:
+        runs-on: self-hosted
+        steps:
+         - name: show OS runner
+           run: |
+            echo "runners are running on windows os"
+            echo "showing runers is ${RUNNERS_OS}"
+    echo-windows:
+        runs-on: windows-latest
+        steps:
+            - name: shwo OS Runner
+              shell: bash
+              run: |
+                  echo : "showing windows runner os"
+                  echo : "windows runners ${RUNNERS_OS}"
+    
+            
+
+
