@@ -9,7 +9,7 @@ jobs:
             echo "runners are running on windows os"
             echo "showing runers is ${RUNNERS_OS}"
     echo-windows:
-        runs-on: windows-latest
+        runs-on: self-hosted
         steps:
             - name: shwo OS Runner
               shell: bash
