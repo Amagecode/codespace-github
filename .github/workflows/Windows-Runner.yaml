@@ -7,16 +7,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install PowerShell Core
-        run: |
-          Invoke-WebRequest -Uri https://github.com/PowerShell/PowerShell/releases/download/v7.2.6/PowerShell-7.2.6-win-x64.msi -OutFile $env:TEMP\PowerShell-7.2.6-win-x64.msi
-          Start-Process -FilePath msiexec.exe -ArgumentList '/i', "$env:TEMP\PowerShell-7.2.6-win-x64.msi", '/quiet', '/norestart' -NoNewWindow -Wait
-
       - name: Set PowerShell Execution Policy
         run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-        shell: pwsh
+        shell: powershell
 
       - name: Run script
         run: |
           echo "Hello GitHub-operation Shashi"
-        shell: pwsh
+        shell: powershell
