@@ -7,7 +7,7 @@ jobs:
          - name: Hello GitHub-Action
            run: echo "Hello GitHub-operation Shashi"
     echo-goodboye:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
             - name: Successfully Execute job
               run: |
