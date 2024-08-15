@@ -1,0 +1,17 @@
+name: 01 - Windows-Runner-test
+on: push
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set PowerShell Execution Policy
+        run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+        shell: pwsh
+
+      - name: Run script
+        run: |
+          echo "Hello GitHub-operation Shashi"
+        shell: pwsh
