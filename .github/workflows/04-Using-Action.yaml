@@ -2,7 +2,7 @@ name: 04-action workfolw
 on: push
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
