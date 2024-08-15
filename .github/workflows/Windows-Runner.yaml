@@ -9,9 +9,9 @@ jobs:
 
       - name: Set PowerShell Execution Policy
         run: Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-        shell: pwsh
+        shell: powershell
 
       - name: Run script
         run: |
           echo "Hello GitHub-operation Shashi"
-        shell: pwsh
+        shell: powershell
